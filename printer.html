@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Printer Error</title>
+		</head>
+		<script type="text/javascript">
+			function printerError(s) {
+ 			 var m = 0;
+  				for (var i = 0; i < s.length; i++) {
+		    		if (s[i].charCodeAt() > 109 || s[i].charCodeAt() < 97) {
+		     			 m++;
+		   			 }
+		 		 }
+		  return m + '/' + s.length;
+	}
+
+		</script>
+	<body>
+
+	</body>
+</html>

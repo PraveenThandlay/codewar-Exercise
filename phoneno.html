@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Phone number</title>
+			<script type="text/javascript">
+				function formatPhoneNumber(s) {
+  var s2 = (""+s).replace(/\D/g, '');
+  var m = s2.match(/^(\d{3})(\d{3})(\d{4})$/);
+  return (!m) ? null : "(" + m[1] + ") " + m[2] + "-" + m[3];
+}
+
+Let’s divide this regular expression in smaller fragments to make is easy to understand.
+
+/^\(?: Means that the phone number may begin with an optional (.
+(\d{3}): After the optional ( there must be 3 numeric digits. If the phone number does not have a (, it must start with 3 digits. E.g. (308 or 308.
+\)?: Means that the phone number can have an optional ) after first 3 digits.
+[- ]?: Next the phone number can have an optional hyphen (-) after ) if present or after first 3 digits.
+(\d{3}): Then there must be 3 more numeric digits. E.g (308)-135 or 308-135 or 308135
+[- ]?: After the second set of 3 digits the phone number can have another optional hyphen (-). E.g (308)-135- or 308-135- or 308135-
+(\d{4})$/: Finally, the phone number must end with four digits. E.g (308)-135-7895 or 308-135-7895 or 308135-7895 or 3081357895.
+				
+				phoneNum([2,0,1,7,1,3,6,6,0,9]);
+			</script>
+		</head>
+	<body>
+
+	</body>
+</html>

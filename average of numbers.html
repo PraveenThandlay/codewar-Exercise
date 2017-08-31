@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Average of Numbers</title>
+		<script type="text/javascript">
+			function averages(numbers) {
+				var a,numbers,b=[];
+
+				if(numbers.length===0||numbers.length===1||numbers.length===null||numbers.length===undefined) {
+					return [];
+				}
+				else {
+				for(a=0;a<=numbers.length;a++){
+
+					if(numbers[a+1]==undefined) {
+						break;
+					}
+					var c=(numbers[a]+numbers[a+1])/2;
+					b.push(c);
+				}
+			}
+			console.log(b);
+
+			}
+			averages([2,1,9,10,8])
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

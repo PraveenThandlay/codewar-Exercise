@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Sum Of numbers in an array</title>
+			<script type="text/javascript">
+				var array=[1,2,3,4,5,6]
+				let result = 0;
+				var sumElement = 0;
+				array.map(function(data,id){
+					array.map(function(info,index){
+						sumElement=array[id]+array[index]
+						array.map(function(finalData,i){
+							if(sumElement===finalData&&id==index){
+								result++;
+							}
+						})
+					})
+				})
+				console.log(result);
+			</script>
+		</head>
+	<body>
+
+	</body>
+</html>

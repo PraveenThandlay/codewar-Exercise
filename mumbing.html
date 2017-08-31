@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Mumbling exercise</title>
+			<script type="text/javascript">
+				function speedcal(){
+					var lm = document.getElementById("limit").value;
+					var spd = document.getElementById("carspd").value;
+
+					if(spd<=lm){
+
+			document.getElementById("result").innerHTML="speed ok";
+					}
+
+					else {
+
+					 var diff=spd-lm;
+					 var b=diff/5;
+					 document.getElementById("result").innerHTML="Your demerit points are:" +b;	 
+
+						}
+
+		}
+
+			</script>
+		</head>
+	<body>
+			<h1>Set speed limit:</h1><input type="number" id="limit">
+			<h3>Enter the cars speed</h3><input type="number" id="carspd">
+			</br></br>
+			<input type="button" value="Calculate" onclick="speedcal()">
+
+			<h1 id="result"></h1>
+	</body>
+</html> 
